@@ -3,15 +3,95 @@ import React from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import TuneOutlinedIcon from '@mui/icons-material/TuneOutlined';
 import ContentPage from '../components/ContentPage';
-import CardPokemon from '../components/CardPokemon';
 import PokemonTypes from '../types/PokemonTypes';
+import ListPokemon from '../components/ListPokemon';
 
-const pokemon: PokemonTypes = {
-  cod: '#001',
-  image: '/images/Eevee.png',
-  name: 'Eevee',
-  type: 'normal'
-};
+const pokemon: PokemonTypes[] = [
+  {
+    cod: '#001',
+    image: '/images/Eevee.png',
+    name: 'Eevee',
+    type: 'normal'
+  },
+  {
+    cod: '#001',
+    image: '/images/Eevee.png',
+    name: 'Eevee',
+    type: 'normal'
+  },
+  {
+    cod: '#001',
+    image: '/images/Eevee.png',
+    name: 'Eevee',
+    type: 'normal'
+  },
+  {
+    cod: '#001',
+    image: '/images/Eevee.png',
+    name: 'Eevee',
+    type: 'normal'
+  },
+  {
+    cod: '#001',
+    image: '/images/Eevee.png',
+    name: 'Eevee',
+    type: 'normal'
+  },
+  {
+    cod: '#001',
+    image: '/images/Eevee.png',
+    name: 'Eevee',
+    type: 'normal'
+  },
+  {
+    cod: '#001',
+    image: '/images/Eevee.png',
+    name: 'Eevee',
+    type: 'normal'
+  },
+  {
+    cod: '#001',
+    image: '/images/Eevee.png',
+    name: 'Eevee',
+    type: 'normal'
+  },
+  {
+    cod: '#001',
+    image: '/images/Eevee.png',
+    name: 'Eevee',
+    type: 'normal'
+  },
+  {
+    cod: '#001',
+    image: '/images/Eevee.png',
+    name: 'Eevee',
+    type: 'normal'
+  },
+  {
+    cod: '#001',
+    image: '/images/Eevee.png',
+    name: 'Eevee',
+    type: 'normal'
+  },
+  {
+    cod: '#001',
+    image: '/images/Eevee.png',
+    name: 'Eevee',
+    type: 'normal'
+  },
+  {
+    cod: '#001',
+    image: '/images/Eevee.png',
+    name: 'Eevee',
+    type: 'normal'
+  },
+  {
+    cod: '#001',
+    image: '/images/Eevee.png',
+    name: 'Eevee',
+    type: 'normal'
+  }
+];
 
 const Home: React.FC = () => {
   return (
@@ -39,14 +119,14 @@ const Home: React.FC = () => {
           />
         </FormControl>
       </Grid>
-      <Grid item xs={1}>
+      <Grid item xs={1} sx={{ display: 'flex', justifyContent: 'flex-end' }}>
         <Button variant="contained" sx={{ height: '100%' }}>
           <TuneOutlinedIcon />
         </Button>
       </Grid>
       <Grid item xs={12}>
         <ContentPage>
-          <CardPokemon pokemon={pokemon} />
+          <ListPokemon items={pokemon} />
         </ContentPage>
       </Grid>
     </Grid>
