@@ -8,6 +8,22 @@ const defaultTheme = createTheme({
     secondary: {
       main: '#ee6b2f'
     }
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: '10px'
+        }
+      }
+    },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: {
+          borderRadius: '10px'
+        }
+      }
+    }
   }
 });
 
