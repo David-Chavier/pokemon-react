@@ -9,6 +9,7 @@ const MyPaper = styled(Paper)<PaperProps>(({ theme }) => ({
   borderRadius: '15px',
   border: '2px solid',
   padding: '20px',
+  marginBottom: '20px',
   borderColor: theme.palette.primary.main
 }));
 

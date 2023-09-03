@@ -104,7 +104,7 @@ const Home: React.FC = () => {
       <Grid item xs={12} textAlign={'center'}>
         <Typography variant="body1">Pesquise seu pokemon pelo nome ou pelo código da pokédex</Typography>
       </Grid>
-      <Grid item xs={11}>
+      <Grid item xs={10} md={11}>
         <FormControl variant="outlined" fullWidth>
           <OutlinedInput
             id="outlined-adornment-password"
@@ -119,7 +119,7 @@ const Home: React.FC = () => {
           />
         </FormControl>
       </Grid>
-      <Grid item xs={1} sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+      <Grid item xs={2} md={1} sx={{ display: 'flex', justifyContent: 'flex-end' }}>
         <Button variant="contained" sx={{ height: '100%' }}>
           <TuneOutlinedIcon />
         </Button>

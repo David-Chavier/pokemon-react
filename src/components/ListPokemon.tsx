@@ -9,9 +9,9 @@ interface ListPokemonProps {
 
 const ListPokemon: React.FC<ListPokemonProps> = ({ items }) => {
   return (
-    <Grid container spacing={2}>
+    <Grid container spacing={4}>
       {items.map(item => (
-        <Grid item xs={12} sm={3} key={item.cod}>
+        <Grid item xs={12} sm={6} md={3} key={item.cod}>
           <CardPokemon pokemon={item} />
         </Grid>
       ))}
