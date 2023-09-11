@@ -1,99 +1,23 @@
 import { Button, FormControl, Grid, IconButton, InputAdornment, OutlinedInput, Typography } from '@mui/material';
-import React from 'react';
+import React, { useEffect } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import TuneOutlinedIcon from '@mui/icons-material/TuneOutlined';
 import ContentPage from '../components/ContentPage';
-import PokemonTypes from '../types/PokemonTypes';
 import ListPokemon from '../components/ListPokemon';
-
-const pokemon: PokemonTypes[] = [
-  {
-    cod: '#001',
-    image: '/images/Eevee.png',
-    name: 'Eevee',
-    type: 'normal'
-  },
-  {
-    cod: '#001',
-    image: '/images/Eevee.png',
-    name: 'Eevee',
-    type: 'normal'
-  },
-  {
-    cod: '#001',
-    image: '/images/Eevee.png',
-    name: 'Eevee',
-    type: 'normal'
-  },
-  {
-    cod: '#001',
-    image: '/images/Eevee.png',
-    name: 'Eevee',
-    type: 'normal'
-  },
-  {
-    cod: '#001',
-    image: '/images/Eevee.png',
-    name: 'Eevee',
-    type: 'normal'
-  },
-  {
-    cod: '#001',
-    image: '/images/Eevee.png',
-    name: 'Eevee',
-    type: 'normal'
-  },
-  {
-    cod: '#001',
-    image: '/images/Eevee.png',
-    name: 'Eevee',
-    type: 'normal'
-  },
-  {
-    cod: '#001',
-    image: '/images/Eevee.png',
-    name: 'Eevee',
-    type: 'normal'
-  },
-  {
-    cod: '#001',
-    image: '/images/Eevee.png',
-    name: 'Eevee',
-    type: 'normal'
-  },
-  {
-    cod: '#001',
-    image: '/images/Eevee.png',
-    name: 'Eevee',
-    type: 'normal'
-  },
-  {
-    cod: '#001',
-    image: '/images/Eevee.png',
-    name: 'Eevee',
-    type: 'normal'
-  },
-  {
-    cod: '#001',
-    image: '/images/Eevee.png',
-    name: 'Eevee',
-    type: 'normal'
-  },
-  {
-    cod: '#001',
-    image: '/images/Eevee.png',
-    name: 'Eevee',
-    type: 'normal'
-  },
-  {
-    cod: '#001',
-    image: '/images/Eevee.png',
-    name: 'Eevee',
-    type: 'normal'
-  }
-];
+import { useAppDispatch } from '../store/hooks';
+import { getPokemon } from '../store/modules/pokemonsSlice';
 
 const Home: React.FC = () => {
+  const dispatch = useAppDispatch();
+
+  function getRandomInt(max: number) {
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - 1) + 1);
+  }
+
+  useEffect(() => {
+    dispatch(getPokemon(getRandomInt(1281)));
+  }, []);
   return (
     <Grid container spacing={2}>
       <Grid item xs={12} textAlign={'center'}>
@@ -126,7 +50,7 @@ const Home: React.FC = () => {
       </Grid>
       <Grid item xs={12}>
         <ContentPage>
-          <ListPokemon items={pokemon} />
+          <ListPokemon />
         </ContentPage>
       </Grid>
     </Grid>

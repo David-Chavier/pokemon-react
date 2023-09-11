@@ -1,17 +1,20 @@
 import React from 'react';
-import PokemonTypes from '../types/PokemonTypes';
-import { Grid } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 import CardPokemon from './CardPokemon';
+import { useSelector } from 'react-redux';
+import { selectAll } from '../store/modules/pokemonsSlice';
 
-interface ListPokemonProps {
-  items: PokemonTypes[];
-}
+const ListPokemon: React.FC = () => {
+  const pokemonsRedux = useSelector(selectAll);
 
-const ListPokemon: React.FC<ListPokemonProps> = ({ items }) => {
+  if (!pokemonsRedux.length) {
+    return <Typography>Nenhum pokemon para listar</Typography>;
+  }
+
   return (
     <Grid container spacing={4}>
-      {items.map(item => (
-        <Grid item xs={12} sm={6} md={3} key={item.cod}>
+      {pokemonsRedux.map(item => (
+        <Grid item xs={12} sm={6} md={3} key={item.id}>
           <CardPokemon pokemon={item} />
         </Grid>
       ))}
