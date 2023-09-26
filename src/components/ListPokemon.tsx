@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import { selectAll } from '../store/modules/pokemonsSlice';
 
 const ListPokemon: React.FC = () => {
-  const pokemonsRedux = useSelector(selectAll);
+  const pokemonsRedux = useSelector(selectAll).slice(0, 8);
 
   if (!pokemonsRedux.length) {
     return <Typography>Nenhum pokemon para listar</Typography>;

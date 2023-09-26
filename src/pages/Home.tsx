@@ -5,7 +5,7 @@ import TuneOutlinedIcon from '@mui/icons-material/TuneOutlined';
 import ContentPage from '../components/ContentPage';
 import ListPokemon from '../components/ListPokemon';
 import { useAppDispatch } from '../store/hooks';
-import { getPokemon } from '../store/modules/pokemonsSlice';
+import { deleteAll, getPokemon } from '../store/modules/pokemonsSlice';
 
 const Home: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -16,7 +16,10 @@ const Home: React.FC = () => {
   }
 
   useEffect(() => {
-    dispatch(getPokemon(getRandomInt(1281)));
+    dispatch(deleteAll());
+    for (let index = 0; index < 8; index++) {
+      dispatch(getPokemon(getRandomInt(1017)));
+    }
   }, []);
   return (
     <Grid container spacing={2}>

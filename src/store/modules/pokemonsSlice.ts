@@ -20,6 +20,7 @@ export const getPokemon = createAsyncThunk('pokemons/get', async (id: number) =>
     return data;
   } else {
     console.log(response.trace);
+    throw new Error('Erro ao buscar o Pokémon');
   }
 });
 
@@ -29,7 +30,8 @@ const sliceNameSlice = createSlice({
   reducers: {
     addOne: adapter.addOne,
     addMany: adapter.addMany,
-    updateOne: adapter.updateOne
+    updateOne: adapter.updateOne,
+    deleteAll: adapter.removeAll
   },
   extraReducers(builder) {
     builder.addCase(getPokemon.fulfilled, (state, action) => {
@@ -38,5 +40,5 @@ const sliceNameSlice = createSlice({
   }
 });
 
-export const { addOne, addMany, updateOne } = sliceNameSlice.actions;
+export const { addOne, addMany, updateOne, deleteAll } = sliceNameSlice.actions;
 export default sliceNameSlice.reducer;
