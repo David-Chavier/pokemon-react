@@ -12,7 +12,7 @@ const DefaultLayout: React.FC<DefaultLaoutProps> = ({ component: Component }) =>
         <AppBar position="static">
           <Toolbar>
             <IconButton size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
-              <Avatar src="/images/logoPokebola.jpg" />
+              <Avatar src="/images/logo-pokeball.png" />
             </IconButton>
           </Toolbar>
         </AppBar>
