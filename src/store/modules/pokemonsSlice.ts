@@ -9,8 +9,8 @@ const adapter = createEntityAdapter<PokemonTypes>({
 
 export const { selectAll, selectById } = adapter.getSelectors((state: RootState) => state.pokemons);
 
-export const getPokemon = createAsyncThunk('pokemons/get', async (id: number) => {
-  const response = await doGet(`/pokemon/${id}`);
+export const getPokemon = createAsyncThunk('pokemons/get', async (idOrName: number | string) => {
+  const response = await doGet(`/pokemon/${idOrName}`);
 
   if (response.success) {
     const { data } = response;

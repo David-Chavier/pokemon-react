@@ -1,13 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit';
+import PokemonTypes from '../../types/PokemonTypes';
 
-const initialState = '';
+const initialState = {} as PokemonTypes;
 
 const pokemonSlice = createSlice({
   name: 'pokemon',
   initialState,
   reducers: {
     create(state, action) {
-      return action.payload;
+      return (state = action.payload);
     },
     clear() {
       return initialState;
