@@ -1,12 +1,11 @@
 import React from 'react';
 import { Button, Grid, Typography } from '@mui/material';
 import CardPokemon from './CardPokemon';
-import { useSelector } from 'react-redux';
 import { selectAll } from '../store/modules/pokemonsSlice';
-// import DialogConfirm from './DetailPokemon';
 import { useAppDispatch } from '../store/hooks';
 import { create } from '../store/modules/pokemonSlice';
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const ListPokemon: React.FC = () => {
   const dispatch = useAppDispatch();

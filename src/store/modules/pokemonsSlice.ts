@@ -9,7 +9,7 @@ const adapter = createEntityAdapter<PokemonTypes>({
 
 export const { selectAll, selectById } = adapter.getSelectors((state: RootState) => state.pokemons);
 
-export const getPokemon = createAsyncThunk('pokemons/get', async (idOrName: number | string) => {
+export const getPokemons = createAsyncThunk('pokemons/get', async (idOrName: number | string) => {
   const response = await doGet(`/pokemon/${idOrName}`);
 
   if (response.success) {
@@ -34,7 +34,7 @@ const sliceNameSlice = createSlice({
     deleteAll: adapter.removeAll
   },
   extraReducers(builder) {
-    builder.addCase(getPokemon.fulfilled, (state, action) => {
+    builder.addCase(getPokemons.fulfilled, (state, action) => {
       adapter.addOne(state, action.payload);
     });
   }
