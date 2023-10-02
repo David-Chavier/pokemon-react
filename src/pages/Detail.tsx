@@ -53,21 +53,9 @@ const Detail: React.FC = () => {
           </Grid>
         </Grid>
       </Grid>
-      <Grid item xs={12} sm={6}>
+      <Grid item xs={12} sm={12} md={6}>
         <Grid container>
           <Grid item xs={12}>
-            {/* <Typography>{pokemonRedux.stats[0].stat.name}</Typography>
-        <Typography>{pokemonRedux.stats[0].base_stat}</Typography>
-        <Typography>{pokemonRedux.stats[1].stat.name}</Typography>
-        <Typography>{pokemonRedux.stats[1].base_stat}</Typography>
-        <Typography>{pokemonRedux.stats[2].stat.name}</Typography>
-        <Typography>{pokemonRedux.stats[2].base_stat}</Typography>
-        <Typography>{pokemonRedux.stats[3].stat.name}</Typography>
-        <Typography>{pokemonRedux.stats[3].base_stat}</Typography>
-        <Typography>{pokemonRedux.stats[4].stat.name}</Typography>
-        <Typography>{pokemonRedux.stats[4].base_stat}</Typography>
-        <Typography>{pokemonRedux.stats[5].stat.name}</Typography>
-        <Typography>{pokemonRedux.stats[5].base_stat}</Typography> */}
             <TableStatsPokemon
               hp={pokemonRedux.stats[0].base_stat}
               attack={pokemonRedux.stats[1].base_stat}
@@ -91,7 +79,7 @@ const Detail: React.FC = () => {
           >
             <Grid container>
               <Grid item xs={12}>
-                <Grid container sx={{ margin: '40px' }}>
+                <Grid container sx={{ padding: '40px' }}>
                   <Grid item xs={6}>
                     <Typography sx={{ color: 'white' }}>Height</Typography>
                     <Typography>{pokemonRedux.height / 10} m</Typography>
@@ -112,7 +100,7 @@ const Detail: React.FC = () => {
           </Grid>
         </Grid>
       </Grid>
-      <Grid item xs={12} sm={6}>
+      <Grid item xs={12} sm={12} md={6}>
         <Paper elevation={0} sx={{ backgroundColor: color0.card, textAlign: 'center', border: '2px solid #e3350d' }}>
           <img src={pokemonRedux.image} alt={pokemonRedux.name} width="90%" />
         </Paper>

@@ -49,7 +49,7 @@ const Home: React.FC = () => {
           <OutlinedInput
             id="outlined-adornment-password"
             type="text"
-            onChange={e => setPokemon(e.target.value)}
+            onChange={e => setPokemon(e.target.value.toLowerCase())}
             startAdornment={
               <InputAdornment position="end">
                 <IconButton aria-label="toggle password visibility" edge="start">
