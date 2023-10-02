@@ -1,46 +1,65 @@
-# Getting Started with Create React App
+# README da My Pokédex
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introdução
+Esta é uma Pokédex simples que consome a API de Pokémon. Ela permite aos usuários pesquisar e visualizar informações sobre diferentes Pokémon.
 
-## Available Scripts
+## Funcionalidades
+- Pesquisa de Pokémon por nome ou número da Pokédex.
+- Exibe detalhes do Pokémon, como tipo, altura, peso e habilidades.
+- Imagem do Pokémon.
+- Lista de Pokémon random.
+- ...
 
-In the project directory, you can run:
+## Pré-requisitos
+Antes de começar a usar esta Pokédex, certifique-se de que você tenha as seguintes ferramentas instaladas:
+- Node.js
+- NPM (gerenciador de pacotes Node.js)
+- ...
 
-### `npm start`
+## Instalação
+1. Clone este repositório em sua máquina local.
+2. Navegue até a pasta do projeto.
+3. Execute o seguinte comando para instalar as dependências:
+   ```bash
+   npm install
+   ```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Uso
+1. Após a instalação, inicie o servidor local com o seguinte comando:
+   ```bash
+   npm start
+   ```
+2. Abra seu navegador e acesse `http://localhost:3000` para começar a usar a Pokédex.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## API de Pokémon
+Esta Pokédex consome a API de Pokémon.
 
-### `npm test`
+## Tecnologias Utilizadas
+Este projeto foi desenvolvido utilizando uma série de tecnologias e bibliotecas modernas para garantir um desempenho eficiente e uma experiência de usuário aprimorada. Algumas das principais tecnologias e bibliotecas incluem:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React
+- Material-UI (MUI)
+- TypeScript
+- React Redux
+- Axios
+- ESLint
 
-### `npm run build`
+## Responsividade
+Este projeto foi desenvolvido com design responsivo em mente, o que significa que ele é capaz de se adaptar e funcionar de maneira eficaz em uma variedade de dispositivos e tamanhos de tela. Algumas características da responsividade incluem:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+A interface do usuário é projetada para ser amigável e legível em telas pequenas, como smartphones e tablets.
+Elementos da página são redimensionados e reorganizados automaticamente para garantir uma experiência consistente em diferentes dispositivos.
+Os recursos de zoom e rolagem são otimizados para uma navegação suave em telas sensíveis ao toque.
+Testes foram realizados em diversos navegadores e dispositivos para garantir a compatibilidade.
+Portanto, sinta-se à vontade para acessar este projeto em qualquer dispositivo de sua escolha, e ele deve funcionar perfeitamente para proporcionar a melhor experiência de usuário possível.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Acessar a aplicação 
+Você pode experimentar a aplicação <a href="https://projeto-jogo-da-velha-react.vercel.app">aqui</a>.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Screenshots 
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![pokedexP1](https://github.com/David-Chavier/pokemon-react/assets/115047948/4557f8df-95e5-490f-bac0-cb1315dddbf5)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+![pokedexP2](https://github.com/David-Chavier/pokemon-react/assets/115047948/bc156b9c-705f-4c6a-a5ce-4d1fe4b07ca7)
